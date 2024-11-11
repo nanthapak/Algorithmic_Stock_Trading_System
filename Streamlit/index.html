@@ -1,0 +1,125 @@
+{% extends 'base.html'%}
+
+
+{% block head %}
+{% endblock %}
+
+
+
+{% block body %}
+<div class="pageheader">
+    <div class="headername">
+        Algorithmic Trade Website
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn"><img class="userpic"
+                src="{{url_for('static',filename='Sample_User_Icon.png')}}"></button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+</div>
+
+<hr>
+<div class=" box">
+    <div>
+        <p class="label-on-box">OVERVIEW</p>
+    </div>
+
+    <div class="container1">
+        <div class="hundper">
+            <p class="subbox1"> MONEY AVAILABLE</p>
+            <br>
+            <p class="subbox1big">$ 100,000</p>
+        </div>
+        <div class="fifthper">
+            <p class="subbox1"> RETURN</p>
+            <br>
+            <p class="subbox1big">xx.xx%</p>
+        </div>
+        <div class="fifthper">
+            <p class="subbox1"> ANNUAL</p>
+            <br>
+            <p class="subbox1big">xx.xx%</p>
+        </div>
+        <div class="fifthper">
+            <p class="subbox1"> POWER</p>
+            <br>
+            <p class="subbox1big">xx.xx%</p>
+        </div>
+        <div class="fifthper">
+            <p class="subbox1"> CASH</p>
+            <br>
+            <p class="subbox1big">xx.xx%</p>
+        </div>
+    </div>
+    <div>
+        <p class="label-on-box">STOCKLIST</p>
+    </div>
+    <div class="container2">
+
+        <form action="/" method="POST">
+            <input type="text" name="stockname" id="stockname" style="width: 50px;">
+            <input type="submit" value="ADD STOCK" style="display: inline;">
+        </form>
+
+
+    </div>
+
+    <div class="container3">
+        <p class="label-on-box">GRAPH</p>
+        <div id='chart' class='chart' ”></div>
+        <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+        <script type='text/javascript'>
+            var graphs = {{ graphJSON | safe}};
+            Plotly.plot('chart', graphs, {});
+        </script>
+        <!-- TradingView Widget BEGIN -->
+        <!--<div class="tradingview-widget-container">
+            <div id="tradingview_090f0"></div>
+            <div class="tradingview-widget-copyright">
+
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.widget(
+                        {
+                            "height": 450,
+                            "width": 600,
+                            "symbol": "{{stockname}}",
+                            "timezone": "Etc/UTC",
+                            "theme": "dark",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "range": "YTD",
+                            "allow_symbol_change": true,
+                            "details": true,
+                            "container_id": "tradingview_090f0"
+                        }
+                    );
+                </script>
+            </div>
+        </div>-->
+
+    </div>
+</div>
+<hr>
+<div class="boxofsignal">
+    <p>
+        RECOMMNEND : {{a}}
+    </p>
+
+</div>
+<p>
+    {{stock}}
+</p>
+<!--<div id='chart' class='chart' ”></div>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+    var graphs = {{ graphJSON | safe}};
+    Plotly.plot('chart', graphs, {});
+</script>-->
+{% endblock %}

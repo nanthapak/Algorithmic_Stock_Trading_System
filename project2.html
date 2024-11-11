@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<title>
+    Algorithmic Trade Website
+</title>
+
+<head>
+    <style>
+        .headername {
+            font-size: 30px;
+            font-weight: bolder;
+            margin-left: 50px;
+            color: white;
+            padding-top: 10px;
+            width: 90%;
+        }
+
+        hr {
+            height: 5px;
+            border-width: 0;
+            background-color: white;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            height: 470px;
+            width: 90%;
+            margin-top: 20px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .text-onbox {
+            margin-left: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .container1 {
+            background-color: white;
+            height: 200px;
+            width: 35%;
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .container2 {
+            background-color: white;
+            height: 180px;
+            width: 35%;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+        }
+
+        .container3 {
+            height: 400px;
+            width: 400px;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .subbox1 {
+            font-size: 15px;
+            color: black;
+            font-weight: normal;
+            margin: 10px;
+            margin-bottom: -30px;
+
+        }
+
+        .subbox1big {
+            font-size: 30px;
+            color: black;
+            font-weight: normal;
+            margin: 10px;
+
+
+        }
+
+        .label-on-box {
+            margin-left: 15px;
+            margin-bottom: -8px;
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .hundper {
+            width: 100%;
+            height: auto;
+            margin-bottom: -80px;
+        }
+
+        .fifthper {
+            width: 50%;
+            height: auto;
+            margin-bottom: -80px;
+        }
+
+        .list {
+            height: 20px;
+            width: 50%;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .pageheader {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+        }
+
+        .usericon {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .userbutton {
+            margin-top: -5px; 
+            width: 50px;
+            height: 50px;
+
+        }
+
+        .usericon:hover {
+            transform: scale(1.2);
+            opacity: 1;
+            background-color: #676565;
+
+        }
+
+
+        .intooltip {
+            width: 80px;
+            height: 30px;
+            background-color: white;
+        }
+
+        .tooltip {
+            display: none;
+            width: 80px;
+            height: 30px;
+
+
+        }
+        .ioi{
+            display: flex;
+            flex-direction: column;
+        }
+        .ioi:hover .tooltip{
+            display: flex;
+            flex-direction: column;
+            display: block;
+            margin-top: 60px;
+            margin-left: -60px;
+         
+            position: absolute
+        }
+    </style>
+</head>
+
+<body style="background-color: #1d2951;">
+    <div class="pageheader">
+        <div class="headername">
+            Algorithmic Trade Website
+        </div>
+        <div class="ioi">
+        <div class="usericon">
+            <img class="userbutton" src="Sample_User_Icon.png">       
+        </div>
+        <div class="tooltip">
+<p> CONTENT 1 wwwwwwwwwwwww</p>
+<p> CONTENT 1 wwwwwwwwwwwww</p>
+<p> CONTENT 1 wwwwwwwwwwwww</p>
+
+
+
+        </div>
+        </div>
+    </div>
+    <hr>
+    <div class=" box">
+        <div>
+            <p class="label-on-box">OVERVIEW</p>
+        </div>
+
+        <div class="container1">
+            <div class="hundper">
+                <p class="subbox1"> MONEY AVAILABLE</p>
+                <br>
+                <p class="subbox1big">$ xxx,xxx</p>
+            </div>
+            <div class="fifthper">
+                <p class="subbox1"> RETURN</p>
+                <br>
+                <p class="subbox1big">xx.xx%</p>
+            </div>
+            <div class="fifthper">
+                <p class="subbox1"> ANNUAL</p>
+                <br>
+                <p class="subbox1big">xx.xx%</p>
+            </div>
+            <div class="fifthper">
+                <p class="subbox1"> POWER</p>
+                <br>
+                <p class="subbox1big">xx.xx%</p>
+            </div>
+            <div class="fifthper">
+                <p class="subbox1"> CASH</p>
+                <br>
+                <p class="subbox1big">xx.xx%</p>
+            </div>
+        </div>
+        <div>
+            <p class="label-on-box">STOCKLIST</p>
+        </div>
+        <div class="container2">
+            <select onfocus='this.size=7;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+            </select>
+
+
+        </div>
+        <div>
+            <p class="label-on-box">GRAPH</p>
+        </div>
+        <div class="container3">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div id="tradingview_090f0"></div>
+                <div class="tradingview-widget-copyright">
+
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget(
+                            {
+                                "height": 450,
+                                "width": 600,
+                                "symbol": "NASDAQ:AAPL",
+                                "timezone": "Etc/UTC",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "en",
+                                "toolbar_bg": "#f1f3f6",
+                                "enable_publishing": false,
+                                "range": "YTD",
+                                "allow_symbol_change": true,
+                                "details": true,
+                                "container_id": "tradingview_090f0"
+                            }
+                        );
+                    </script>
+                </div>
+            </div>
+
+
+        </div>
+
+</body>
+
+</html>
